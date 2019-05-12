@@ -1,0 +1,52 @@
+.container {
+    margin-top: 100px;
+}
+
+.card{
+    display: inline-block;
+    margin: 10px;
+}
+
+.tarjeta{
+    width: 20%;
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+
+.titulo{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 14px;
+}
+@media screen and (max-width: 600px){
+    .tarjeta{
+        width: 100%;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .tarjeta{
+        width: 46%;
+    }
+}
+
+@media screen and (min-width: 835px){
+    .tarjeta{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1350px){
+    .tarjeta{
+        width: 22%;
+        padding: 25px;
+    }
+}
+
+.eliminar{
+    font-size: 12px;
+}

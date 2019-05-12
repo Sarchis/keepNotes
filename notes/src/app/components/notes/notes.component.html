@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="card">
+        <span class="card-title">
+          <h4 class="center-align">Add Notas</h4>
+        </span>
+        <div class="card-content">
+          <form #noteForm="ngForm" (ngSubmit)="addNote(noteForm)">
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" name="title" class="validate" #name="ngModel"
+                  [(ngModel)]="noteService.selectedNote.title" placeholder="Title">
+                <textarea class="materialize-textarea" name="description" #name="ngModel"
+                  [(ngModel)]="noteService.selectedNote.description" placeholder="Description"></textarea>
+              </div>
+              <div class="card-action">
+                <div class="input-field col s12">
+                  <button class="btn right yellow darken-2" style="margin-left: 3px" (click)="resetForm(noteForm)">Clean</button>
+                  <button class="btn right blue">Save</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card tarjeta" *ngFor="let note of noteService.notes">
+        <span class="card-title">
+          <h5 class="center-align titulo">{{note.title}}</h5>
+        </span>
+        <div class="card-content">
+          <p>{{note.description}}</p>
+          <div class="card-action">
+            <div>
+              <button class="btn right red darken-1 eliminar"><i class="material-icons">delete</i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
